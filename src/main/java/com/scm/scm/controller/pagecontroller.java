@@ -29,5 +29,22 @@ public class pagecontroller {
         System.out.println("service is started");
         return "service";
     }
+
+    @RequestMapping("/contact")
+    public String contact() {
+        System.out.println("contact is started");
+        return "contact";
+    }
+    @RequestMapping("/login")
+    public String login() {
+        System.out.println("login is started");
+        return "login";
+    }
+
+    @RequestMapping("/signup")
+    public String signup() {
+        System.out.println("signup is started");
+        return "signup";
+    }
     
 }

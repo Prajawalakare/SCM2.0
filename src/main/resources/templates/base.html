@@ -1,5 +1,22 @@
-<div th:fragment="parent">
-    <h1>this is parent-fragment</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, suscipit!</p>
+<!DOCTYPE html>
+<html lang="en"  th:fragment="parent(content)" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Base</title>
     
-</div>
+    <link rel="stylesheet" data-th-href="@{'./css/output.css'}"/>
+</head>
+<body>
+
+    <!-- Navbar-->
+    <div th:replace="~{navbar::navbar}"></div>
+
+    <!--body-->
+    <!-- Body content -->
+    <div class="text-center p-6 ">
+        <section th:replace="${content}"></section>
+    </div>
+
+   
+</body>
+</html>
